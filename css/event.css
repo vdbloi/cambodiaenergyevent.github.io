@@ -615,7 +615,7 @@ p,
     color: #FFF;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    background: url('../images/Main-Banner.png') no-repeat top center ;
+    background: url('https://media.vdb-loi.com/wp-content/uploads/2022/11/Main-Banner.png') no-repeat top center ;
     background-size: cover;
 
 }
@@ -2098,8 +2098,17 @@ footer {
 }
 
 /**Cards*/
+.downloads .row{
+    display: flex;
+    align-items: stretch;
+}
 .downloads .card {
     padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
 }
 .downloads .card-title{
     margin-bottom: 20px;
@@ -2107,13 +2116,10 @@ footer {
     font-weight: 600;
     line-height: 1.2em;
 }
-.downloads .image-holder{
-    
-}
+
 .downloads .image-holder img{
     width: 100%;
 }
-
 .downloads .buttons{
     padding: 8px 20px;
     background-color: #00aeff;
@@ -2122,7 +2128,42 @@ footer {
     color: white;
     font-size: 13px;
     font-weight: bold;
+    display: block;
+    width: 150px;
+    margin: auto;
 }
 .downloads .buttons:hover{
     background-color: #009eef;
 }
+
+.downloads .titledownload-wrapper{
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .downloads .row{
+        display: block;
+    }
+    .downloads .card {
+        flex-direction: row;
+        align-items: center;
+    }
+    .downloads .image-holder img{
+        width: 120px;
+    }
+    .downloads .titledownload-wrapper .card-title{
+        text-align: left;
+    }
+    .downloads .buttons {
+        width: 100%;
+    }
+    .card{
+        border-bottom: 1px dotted gray;
+    }
+
+}
+.downloads .image-holder{
+    
+}
+
+
